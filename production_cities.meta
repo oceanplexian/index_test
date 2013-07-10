@@ -1,0 +1,48 @@
+{
+  "index": "production_cities",
+  "metadata": {
+    "production_cities": {
+      "city": {
+        "_all": {
+          "enabled": false
+        },
+        "properties": {
+          "has_hospitals": {
+            "type": "boolean"
+          },
+          "has_seo_doctors": {
+            "type": "boolean"
+          },
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string",
+            "analyzer": "full_with_location_synonyms"
+          },
+          "name_sortable": {
+            "type": "string",
+            "index": "not_analyzed",
+            "omit_norms": true,
+            "index_options": "docs"
+          },
+          "seo_name": {
+            "type": "string",
+            "index": "not_analyzed",
+            "omit_norms": true,
+            "index_options": "docs"
+          },
+          "state_id": {
+            "type": "integer"
+          },
+          "state_seo_name": {
+            "type": "string",
+            "index": "not_analyzed",
+            "omit_norms": true,
+            "index_options": "docs"
+          }
+        }
+      }
+    }
+  }
+}
